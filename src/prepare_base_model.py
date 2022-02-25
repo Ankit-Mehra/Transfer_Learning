@@ -18,6 +18,7 @@ logging.basicConfig(
 def main(config_path):
     ## read config files
     config = read_yaml(config_path)
+    logging.info(config)
 
     ## get the data
     (X_train_full, y_train_full), (X_test, y_test) = tf.keras.datasets.mnist.load_data()
